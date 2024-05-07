@@ -1,0 +1,175 @@
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+body {
+    background-image: url("./images/bg.png");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    height: auto;
+    min-height: 100vh;
+    margin: unset !important;
+    background-size: 100% 100%;
+}
+
+.wrap-body {
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-area {
+    position: fixed;
+    max-width: 750px;
+    top: -4px;
+    z-index: 1;
+
+}
+
+.header-area img,
+.footer-area img {
+    width: 100%;
+}
+
+.menu-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.menu-area a {
+    width: 25%;
+    padding: 1rem;
+}
+
+.menu-area a img {
+    width: 100%;
+}
+
+.device-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.device-area div {
+    width: 40%;
+    padding: 1rem;
+}
+
+.device-area a img {
+    width: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-area {
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    text-align: center;
+}
+.logo-area img {
+    padding: 1rem;
+    width: 70%;
+}
+
+.hero-image,
+.menu-area,
+.title-area,
+.device-area,
+.recommend {
+    max-width: 750px;
+    width: 100%;
+}
+
+.title-area{margin-top: 50px;}
+
+.hero-image img,
+.ios-btn img,
+.device-area img,
+.andriod-btn img {
+    width: 100%;
+}
+
+.recommend img {
+    width: 90%;
+}
+
+.title-area {
+    text-align: center;
+}
+.title-area img {
+    width: 100%;
+}
+.hero-image {
+    padding-top: 45%;
+}
+
+.recommend {
+    margin-top: -3rem;
+    text-align: center;
+}
+
+.footer-area {
+    position: fixed;
+    max-width: 750px;
+    bottom: -8px;
+}
+.setup-tips-container {
+    text-align: center;
+}
+.setup-tips-container img {
+    width: 80%;
+}
+
+.mobile-fixed {
+    position: fixed;
+    bottom: 1rem;
+    width: 100%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 480px) {
+    .logo-area {
+        top: 3.5rem;
+        text-align: left;
+    }
+    .logo-area img {
+        width: 50%;
+    }
+    .device-area div {
+        padding: .3rem;
+        width: 45%;
+    }
+    .menu-area a {
+        padding: .5rem;
+        width: 27%;
+    }
+    .device-area {
+        padding-top: 1rem;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    .logo-area {
+        top: 3.5rem;
+        text-align: left;
+    }
+    .logo-area img {
+        width: 30%;
+    }
+    .setup-tips-container {
+        font-size: .7rem;
+    }
+}
