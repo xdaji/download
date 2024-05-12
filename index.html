@@ -14,11 +14,11 @@
         var dataMap = {
             androidLink : "http://d2y3j2x04g1gvj.cloudfront.net/download/daji.apk",
             iosLink : "https://v2ur4f3xb.cc:28371/Ry1xnxEL",
-            tgLink1 : "https://t.me/xxxdaji",
-            tgLink2: "https://t.me/xxxdaji",
-            tgLink3: "https://t.me/xxxdaji",
+            tgLink1 : "https://t.me/appdaji",
+            tgLink2: "https://t.me/appdaji",
+            tgLink3: "https://t.me/appdaji",
             ptLink : "https://lynnconway.me/pornm91",
-            businessLink : "https://t.me/xxxdaji",
+            businessLink : "https://t.me/appdaji",
             affCode : "dyporn_aff:",
             qrCodeUrl : location.href,
             copyText: "dyporn_aff:",
@@ -92,7 +92,7 @@
                     <div class="android" onclick="downloadApp('android')">
                         <img src="static/images/android.png" alt="">
                     </div>
-                    <div class="ios" onclick="downloadApp('ios')" style="display: none;">
+                    <div class="ios" onclick="downloadApp('ios')" >
                         <img src="static/images/iosapp.png" alt="">
                     </div>
                     <div class="web" onclick="downloadApp('web')">
@@ -192,13 +192,13 @@
     }
     $(document).ready(function () {
         if(getDeviceInfo().isIos){
-            $(".android").hide();
-            $(".ios").show();
+           // $(".android").hide();
+            //$(".ios").show();
             $(".setup-tips-container").on('click', function () {
                 $('#ios-detail').fadeIn().css('display', 'flex');
             })
         }else {
-            $(".ios").hide();
+            //$(".ios").hide();
             $(".setup-tips-container").on('click', function () {
                 $('#platform-list').fadeIn().css('display', 'flex');
             })
