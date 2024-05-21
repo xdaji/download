@@ -22,7 +22,7 @@
             affCode : "dyporn_aff:",
             qrCodeUrl : location.href,
             copyText: "dyporn_aff:",
-            webAppUrl: "https://d2cenaxms80z0e.cloudfront.net"
+            webAppUrl: "https://xdaji.github.io/webapp/#/"
         };
     </script>
 </head>
@@ -281,7 +281,8 @@
     function downapp_web() {
         copyText(dataMap.copyText)
         setTimeout(function () {
-            location.href = dataMap.webAppUrl;
+            var pid=getUrl('pid');
+            location.href = dataMap.webAppUrl+'?pid='+pid;
         }, 200);
     }
     function downapp_android() {
