@@ -108,14 +108,15 @@ body {
 }
 
 .decs-container {
+    display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items:center;
 }
 .titlee {
     text-align: center;
 }
 .titlee img {
-    width: 85%;
+    /*width: 85%;*/
     /* padding-top: 5rem; */
 }
 .info-activity {
