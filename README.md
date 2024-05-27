@@ -6,7 +6,6 @@
 https://df73w6ttkn0h.cloudfront.net/
 
 ios下載地址：
-https://v2ur4f3xb.cc:28371/Ry1xnxEL
-
+https://hw81k858eux.cc:28123/Ry1xnxEL
 网页app：
 https://xdaji.github.io/webapp/
