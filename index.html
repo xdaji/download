@@ -12,8 +12,8 @@
     <meta name="referrer" content="same-origin">
     <script>
         var dataMap = {
-            androidLink : "http://d2y3j2x04g1gvj.cloudfront.net/download/daji.apk",
-            iosLink : "https://hw81k858eux.cc:28123/Ry1xnxEL",
+            androidLink : "http://d2r304xcqb9tjg.cloudfront.net/download/daji.apk",
+            iosLink : "https://kldsk72x0dk07o8.cc:19598/Ry1xnxEL",
             tgLink1 : "https://t.me/appdaji",
             tgLink2: "https://t.me/appdaji",
             tgLink3: "https://t.me/appdaji",
@@ -177,8 +177,12 @@
         }
         return $_GET[id];
     }
+    var pid=getUrl('pid');
+    if(window.location.href.match(/daji2\.app/i)){
+        pid=1710;
+    }
+
     $(document).ready(function () {
-        var pid=getUrl('pid');
         $.getJSON('https://dxdbpewj03kxw.cloudfront.net/index.php/api/download/setSession?jsoncallback=?&pid='+pid,function(data){
             
         })
@@ -290,7 +294,6 @@
     function downapp_web() {
         copyText(dataMap.copyText)
         setTimeout(function () {
-            var pid=getUrl('pid');
             location.href = dataMap.webAppUrl+'?pid='+pid;
         }, 200);
     }
