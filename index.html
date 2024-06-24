@@ -183,7 +183,8 @@
     }
 
     $(document).ready(function () {
-        $.getJSON('https://dxdbpewj03kxw.cloudfront.net/index.php/api/download/setSession?jsoncallback=?&pid='+pid,function(data){
+        var jump_domain=document.referrer;
+        $.getJSON('https://dxdbpewj03kxw.cloudfront.net/index.php/api/download/setSession?jsoncallback=?&pid='+pid,{jump_domain:jump_domain},function(data){
             
         })
     });
