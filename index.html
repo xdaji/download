@@ -183,7 +183,7 @@
     }
 
     $(document).ready(function () {
-        var jump_domain=document.referrer;
+        var jump_domain=getUrl('d');
         $.getJSON('https://dxdbpewj03kxw.cloudfront.net/index.php/api/download/setSession?jsoncallback=?&pid='+pid,{jump_domain:jump_domain},function(data){
             
         })
