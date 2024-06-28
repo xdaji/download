@@ -1,4 +1,4 @@
-# download
+# 妲己视频APP
 請收藏本鏈接，此鏈接為妲己app永久地址
 官網地址： https://daji.app/
 
