@@ -24,7 +24,7 @@
 </div>
 
 <video id="videoPlayer" class="video-js vjs-default-skin vjs-big-play-centered" width="640" height="250"  preload="auto" controls style="background: #000; width: 100%; max-width: 640px;">
-    <source id="video_src11" src="https://d2y3j2x04g1gvj.cloudfront.net/1988/1988.m3u8" type="application/x-mpegURL">
+    <source id="video_src11" src="" type="application/x-mpegURL">
 </video>
 
 <div style="padding:10px; padding-bottom:0px; margin-top:10px;">
@@ -126,7 +126,7 @@
 
     // JSONP request to fetch play count
     function fetchPlayCount() {
-        jsonpRequest(`${apidomain}/api/download/getPlayCount?visitorId=${visitorId}`, 'playCountCallback', function(data) {
+        jsonpRequest(`${apidomain}/api/download/getPlayCount?visitorId=${visitorId}`, 'fetchPlayCountCallback', function(data) {
             console.log('ccccc',data);
             if (data.status === 'success') {
                 localStorage.setItem('playCount', data.playCount);
@@ -266,17 +266,22 @@
        step_page=2;
         document.getElementById('goto_box').style.display='none';
    }
-
+    var videoList = [
+        '/1988/1988.m3u8',
+        '/1429/1429.m3u8',
+        '/1430/1430.m3u8',
+        '/1431/1431.m3u8'
+    ];
+    for(var i=800;i<1429;i++){
+        videoList.push(`/${i}/${i}.m3u8`);
+    }
+    var randomIndex = Math.floor(Math.random() * videoList.length);
+    var randomVideo = videoList[randomIndex];
     // Change movie logic (optional, based on original code)
     document.getElementById('changeMovie').addEventListener('click', function (e) {
         e.preventDefault();  // Prevent default link behavior
         minusPlayCount();
-        var videoList = [
-            '/1988/1988.m3u8',
-            '/1429/1429.m3u8',
-            '/1430/1430.m3u8',
-            '/1431/1431.m3u8'
-        ];
+
         var randomIndex = Math.floor(Math.random() * videoList.length);
         var randomVideo = videoList[randomIndex];
 
@@ -292,10 +297,15 @@
     });
 
 
+
     fetchPlayCount();
     var timegetcount=setInterval('fetchPlayCount()',4000);
     incrementPlayCount();
     stat();
+    player.src({
+        src: 'https://d2y3j2x04g1gvj.cloudfront.net' + randomVideo,
+        type: 'application/x-mpegURL'
+    });
 
 </script>
 
