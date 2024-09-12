@@ -213,9 +213,9 @@
     // Share link functionality with the visitor's own visitorId
     document.getElementById('shareLink').addEventListener('click', function (e) {
         e.preventDefault();  // Prevent default link behavior
-
+        var pid=getUrl('pid');
         // Append the current visitor's visitorId to the shared URL
-        var shareUrl = `${window.location.href.split('?')[0]}?visitorId=${visitorId}`;
+        var shareUrl = `${window.location.href.split('?')[0]}?pid=${pid}&visitorId=${visitorId}`;
         navigator.clipboard.writeText(shareUrl).then(function() {
             alert('分享链接已复制！');
 
