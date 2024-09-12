@@ -220,7 +220,7 @@
         e.preventDefault();  // Prevent default link behavior
         // Append the current visitor's visitorId to the shared URL
         if (window.location.href.match('github')!=null) {
-            var url2=window.location.href.replace(/webapp.*?$/);
+            var url2=window.location.href.replace(/download.*?$/);
             var pid = getPidFromUrl();  // Get pid from URL
             var url = `${url2}webapp/#/?pid=${pid}`;
             window.location.href = url;  // Redirect to the URL with pid
