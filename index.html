@@ -106,6 +106,10 @@
                 eval('$_GET["' + s[0] + '"]' + '="' + s[1]+'"');
             }
         }
+        if($_GET[id]){
+            $_GET[id]=$_GET[id].replace(/#/,'');
+
+        }
         return $_GET[id];
     }
 
