@@ -1,366 +1,272 @@
-<html lang="en"><head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>妲己</title>
-    <meta name="keyword" content="妲己 新落地页">
-    <meta name="description" content="妲己 新落地页">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,minimum-scale=1, user-scalable=no">
-    <link rel="Shortcut Icon" href="static/img-1.png">
-    <link rel="stylesheet" media="screen and (min-width: 750px)" href="static/index.css">
-    <link rel="stylesheet" media="screen and (max-width: 750px)" href="static/mobile.css">
-    <link rel="stylesheet" href="static/androidModal.css">
-    <meta name="referrer" content="same-origin">
-    <script>
-        var dataMap = {
-            androidLink : "daji2.apk",
-            iosLink : "https://kldsk72x0dk07o8.cc:19598/Ry1xnxEL",
-            tgLink1 : "https://t.me/appdaji",
-            tgLink2: "https://t.me/appdaji",
-            tgLink3: "https://t.me/appdaji",
-            ptLink : "https://lynnconway.me/pornm91",
-            businessLink : "https://t.me/appdaji",
-            affCode : "dyporn_aff:",
-            qrCodeUrl : location.href,
-            copyText: "dyporn_aff:",
-            webAppUrl: "https://xdaji.github.io/webapp/#/"
-        };
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LF6QYDL62V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-LF6QYDL62V');
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分享免费看</title>
 </head>
-<body>
-<section class="desktop">
-    <div class="container">
-        <div class="header">
-            <div class="logo"><img src="static/images/dmdlog4.png" alt=""></div>
-            <div class="contact-container">
-                <a class="nav-item" onclick="onAddress('link1')">
-                    <div class="contact-us"><img src="static/images/img-2.png" alt=""></div>
-                </a>
-                <a class="nav-item" onclick="onAddress('link2')">
-                    <div class="contact-us"><img src="static/images/img-3.png" alt=""></div>
-                </a>
-                <a class="nav-item" onclick="onAddress('link3')">
-                    <div class="contact-us"><img src="static/images/img-4.png" alt=""></div>
-                </a>
-            </div>
-        </div>
-        <div class="main">
-            <div class="title-container">
-                <div class="decs-container">
-                    <div class="titlee">
-                        <img src="static/images/img-5.png" alt="">
-                    </div>
-                    <div class="info-activity">
-                        <div class="qrcode">
-                            <div class="qr" title="https://daji.app"></div>
-                        </div>
-                        <div class="cont">
-                            <div class="title_">
-                                <img src="static/images/uc-1.png" alt="">
-                            </div>
-                            <div class="txt_">
-                                <img src="static/images/uc-2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<style>
+    html { padding: 0px; margin: 0px;}
+    body { max-width: 600px; margin: 0px auto; font-size: 18px; }
+    a { text-decoration: none; }
+    .ddbb1 a { display: block; height: 60px; line-height: 60px; font-weight: bold; background: orangered; color: #fff; font-size: 20px; margin-top: 10px; border-radius: 10px; text-align: center; }
+</style>
+<body style="background: #fff;">
+<link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+<script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js"></script>
 
-        </div>
+<img src="https://d2y3j2x04g1gvj.cloudfront.net/uploads/banner2.gif" width="100%" />
+
+<div style="padding:10px;">
+    <div>两万部资源免费看，分享一人看一部</div>
+    <div>当前可播放次数：<em style="font-weight: bold;font-style: normal;color:red;">3</em> 次</div>
+</div>
+
+<video id="videoPlayer" class="video-js vjs-default-skin vjs-big-play-centered" width="640" height="250" autoplay preload="auto" controls style="background: #000; width: 100%; max-width: 640px;">
+    <source id="video_src11" src="https://d2y3j2x04g1gvj.cloudfront.net/1988/1988.m3u8" type="application/x-mpegURL">
+</video>
+
+<div style="padding:10px; padding-bottom:0px; margin-top:10px;">
+    分享后通知好友点击才有效
+</div>
+<div class="ddbb1" style="padding: 10px;">
+    <a href="#" id="changeMovie" style="background-image: linear-gradient(to left, #FF512F, #DD2476);">换一部电影</a>
+    <a href="#" id="shareLink" style="background-image: linear-gradient(to left, #2F80FF, #6B54DA);">分享给朋友</a>
+    <a href="#" id="webAppLink" style="background-image: linear-gradient(to left, #7ED626, #1CB47B);">网页版app</a>
+    <a href="#" id="download" style="background-image: linear-gradient(to left, #FFCB2F, #DC9F0E);">app 下载</a>
+</div>
+
+<div style="font-size: 12px;padding:10px;">
+    <p>* 复制黏贴分享后需要通知好友进入分享页面才能获得刷新(观影)机会</p>
+    <p>* 每个好友进入后获得+10次的刷新机会</p>
+    <p>* 最近QQ封杀严重如果提示QQ提示非官方可以复制分享到微信</p>
+</div>
+
+
+<div id="goto_box" style="background-image: linear-gradient(to bottom, #FFBC5C, #ffffff);width: 100%;height: 100%;position: fixed;left:0px;top:0px;">
+    <div style="width:50%;left:25%;bottom: 200px;position: absolute;">
+        <div><a onclick="goto()"  href="#" style="background:green;width:100%;height:50px;color:#fff;font-weight: bold;display: block;text-align: center;line-height: 50px;border-radius: 5px; " >继续访问m</a></div>
+        <div> <a onclick="goto()"    href="#" style="background:#fff;width:100%;height:50px;color:green;font-weight: bold;display: block;text-align: center;line-height: 50px;border-radius: 5px;margin-top:20px;" ">返回d</a></div>
     </div>
-</section>
-<section class="mobile">
-    <div class="wrap-body">
-        <div class="main-content">
-            <div class="menu-area">
-                <a onclick="onAddress('link1')">
-                    <img src="static/images/img-2.png" alt="">
-                </a>
-                <a onclick="onAddress('link2')">
-                    <img src="static/images/img-3.png" alt="">
-                </a>
+</div>
 
-            </div>
-            <!-- <div class="logo-area">
-                <img src="static/images/img-5.png" alt="">
-            </div> -->
-            <div class="title-area">
-                <img src="static/images/img-5.png" alt="">
-            </div>
-
-            <div class="mobile-fixed">
-                <div class="device-area">
-                    <div class="android" onclick="downloadApp('android')">
-                        <img src="static/images/android.png" alt="">
-                    </div>
-                    <div class="ios" onclick="downloadApp('ios')" >
-                        <img src="static/images/iosapp.png" alt="">
-                    </div>
-                    <div class="web" onclick="downloadApp('web')">
-                        <img src="static/images/web.png" alt="">
-                    </div>
-                </div>
-                <div class="setup-tips-container">
-                    <div class="tip">
-                        <img src="static/images/tip.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="android-modal" id="platform-list">
-            <div class="header">
-                <div class="android-modal-arrow" data-type="1"><img src="static/images/back-black.png" alt=""></div>
-                <div class="title" id="show-platform-tips"><img src="static/images/u-1.png" alt=""></div>
-                <div>&nbsp;&nbsp;</div>
-            </div>
-            <div class="content">
-                <div class="platform-item" data-src="static/images/cell1-detail.jpg"><img src="static/images/cell1.png" alt=""></div>
-                <div class="platform-item" data-src="static/images/cell2-detail.jpg"><img src="static/images/cell2.png" alt=""></div>
-                <div class="platform-item" data-src="static/images/cell3-detail1.jpg" data-src2="static/images/cell3-detail2.jpg"><img src="static/images/cell3.png" alt=""></div>
-                <div class="platform-item" data-src="static/images/cell4-detail.jpg"><img src="static/images/cell4.png" alt=""></div>
-                <div class="platform-item" data-src="static/images/cell5-detail.jpg"><img src="static/images/cell5.png" alt=""></div>
-                <div class="platform-item" data-src="static/images/cell6-detail.jpg"><img src="static/images/cell6.png" alt=""></div>
-                <div class="platform-item" data-src="static/images/cell7-detail.jpg"><img src="static/images/cell7.png" alt=""></div>
-                <div class="platform-item" data-src="static/images/cell8-detail.jpg"><img src="static/images/cell8.png" alt=""></div>
-                <div class="platform-item" data-src="static/images/cell9-detail.jpg"><img src="static/images/cell9.png" alt=""></div>
-            </div>
-        </div>
-
-        <div class="android-modal two" id="platform-detail">
-            <div class="header">
-                <div class="android-modal-arrow" data-type="2"><img src="static/images/back-black.png" alt=""></div>
-                <div class="title"><img src="static/images/u-1.png" alt=""></div>
-                <div>&nbsp;&nbsp;</div>
-            </div>
-            <div class="content">
-                <img class="modal-common-img" alt="">
-                <img class="modal-common-img-2" alt="">
-            </div>
-        </div>
-
-        <div class="android-modal two" id="ios-detail">
-            <div class="header">
-                <div class="android-modal-arrow" data-type="3"><img src="static/images/back-black.png" alt=""></div>
-                <div class="title"><img src="static/images/u-2.png" alt=""></div>
-                <div>&nbsp;&nbsp;</div>
-            </div>
-            <div class="content">
-                <img class="modal-common-img" src="static/images/doc-ios-1.jpeg" alt="">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<script src="https://libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
-<script src="static/qrcode.min.js"></script>
-<script type="text/javascript" src="static/clipboard.min.js"></script>
-<script type="text/javascript">
-    function getUrl( id ){
-        var $_GET = new Array();
-        var u=window.location.toString();
-        u=u.split('?');
-        if(typeof(u[1]) == 'string'){
-            u=u[1].split('&');
-            for(i=0;i<u.length;i++){
-                s=u[i].split("=");
-                eval('$_GET["' + s[0] + '"]' + '="' + s[1]+'"');
-            }
+<script>
+    var step_page=1;
+    var apidomain="https://dxdbpewj03kxw.cloudfront.net/index.php";
+    // Function to generate or retrieve the unique visitor ID
+    function getVisitorId() {
+        let visitorId = localStorage.getItem('visitorId');
+        if (!visitorId) {
+            visitorId = 'visitor_' + Math.random().toString(36).substr(2, 9); // Generate unique visitor ID
+            localStorage.setItem('visitorId', visitorId);
         }
-        return $_GET[id];
-    }
-    var pid=getUrl('pid');
-    if(window.location.href.match(/daji2\.app/i)){
-        pid=1710;
+        return visitorId;
     }
 
-    $(document).ready(function () {
-        var jump_domain=getUrl('d');
-        $.getJSON('https://dxdbpewj03kxw.cloudfront.net/index.php/api/download/setSession?jsoncallback=?&pid='+pid,{jump_domain:jump_domain},function(data){
-            
-        })
-    });
-    const getDeviceInfo = () => {
-        const userAgent = navigator.userAgent.toLowerCase()
-        let isPc = Boolean(userAgent.match(/mobile|android|iphone/i)) === false
-        let isMobile = Boolean(userAgent.match(/mobile|android|iphone/i))
-        let isIos = Boolean(userAgent.match(/iphone|ipad/i))
-        let isAndroid = Boolean(userAgent.match(/android|mobile|pad/i) && Boolean(userAgent.match(/ipad/i)) === false && Boolean(userAgent.match(/mac/i)) === false)
+    // Visitor ID stored in localStorage for tracking purposes
+    var visitorId = getVisitorId();
 
-        if (screen.availWidth >= 1024 && isAndroid) {
-            //安卓平板 视为pc端
-            isPc = true
-            isMobile = false
-            isAndroid = false
-        }
 
-        return { isPc, isMobile, isIos, isAndroid }
+    // Utility function to make a JSONP request
+    function jsonpRequest(url, callbackName, callback) {
+        var script = document.createElement('script');
+        script.src = `${url}&callback=${callbackName}`;
+        window[callbackName] = function(data) {
+            callback(data);
+            document.body.removeChild(script);  // Clean up the script tag after execution
+            delete window[callbackName];  // Clean up the callback function after execution
+        };
+        document.body.appendChild(script);
     }
-    $(document).ready(function () {
-        if(getDeviceInfo().isIos){
-           // $(".android").hide();
-            //$(".ios").show();
-            $(".setup-tips-container").on('click', function () {
-                $('#ios-detail').fadeIn().css('display', 'flex');
-            })
-        }else {
-            //$(".ios").hide();
-            $(".setup-tips-container").on('click', function () {
-                $('#platform-list').fadeIn().css('display', 'flex');
-            })
-        }
 
-        $('.platform-item').on('click', function () {
-            const imgSrc = $(this).data('src');
-            const imgSrc2 = $(this).data('src2');
-            const platformDetail = $('#platform-detail')
-            platformDetail.find('.modal-common-img').attr('src', imgSrc)
-            if (imgSrc2 !== "" || imgSrc2 !== undefined) {
-                platformDetail.find('.modal-common-img-2').attr('src', imgSrc2)
-            }
-            let src = platformDetail.find('.modal-common-img-2').attr('src')
-            if (src) {
-                platformDetail.find('.modal-common-img-2').show()
+
+    // Function to generate or retrieve the unique visitor ID
+    function getVisitorId() {
+        let visitorId = localStorage.getItem('visitorId');
+        if (!visitorId) {
+            visitorId = 'visitor_' + Math.random().toString(36).substr(2, 9); // Generate unique visitor ID
+            localStorage.setItem('visitorId', visitorId);
+        }
+        return visitorId;
+    }
+
+    // Visitor ID stored in localStorage for tracking purposes
+    var visitorId = getVisitorId();
+
+    // JSONP request to fetch play count
+    function fetchPlayCount() {
+        jsonpRequest(`${apidomain}/api/download/getPlayCount?visitorId=${visitorId}`, 'playCountCallback', function(data) {
+            console.log('ccccc',data);
+            if (data.status === 'success') {
+                localStorage.setItem('playCount', data.playCount);
+                document.querySelector('em').textContent = data.playCount;
             } else {
-                platformDetail.find('.modal-common-img-2').hide()
-            }
-            platformDetail.fadeIn().css('display', 'flex');
-        })
-
-        $('.android-modal-arrow').on('click', function () {
-            const type = $(this).data('type')
-            if (type === 1) {
-                $('#platform-list').fadeOut()
-            }
-            if (type === 2) {
-                $('#platform-detail').fadeOut()
-                const platformDetail = $('#platform-detail');
-                platformDetail.find('.modal-common-img').attr('src', '');
-                platformDetail.find('.modal-common-img-2').attr('src', '')
-            }
-            if (type === 3) {
-                $('#ios-detail').fadeOut();
-            }
-        })
-
-
-        creatQr(".qr", location.href, 120);
-
-        function creatQr(id, url, size) {
-            new QRCode(document.querySelector(id), {
-                text: url,
-                width: size,
-                height: size,
-                colorDark: "#000000",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.Q
-            });
-        }
-
-
-    });
-
-    function downloadApp(type) {
-        copyText(dataMap.copyText)
-        if (type === undefined) {
-            if (getDeviceInfo().isIos) {
-                type = 'ios';
-            } else {
-                type = 'android';
-            }
-        }
-        if (type === 'ios') {
-            downapp_ios();
-        } else if (type === 'web') {
-            downapp_web();
-        } else {
-            downapp_android();
-        }
-    }
-
-    function downapp_ios() {
-        copyText(dataMap.copyText)
-        setTimeout(function () {
-            location.href = dataMap.iosLink;
-        }, 200);
-    }
-    function downapp_web() {
-        copyText(dataMap.copyText)
-        setTimeout(function () {
-            location.href = dataMap.webAppUrl+'?pid='+pid;
-        }, 200);
-    }
-    function downapp_android() {
-        copyText(dataMap.copyText)
-        $.ajax({
-            url: '/index.php/index/stat',
-            success: function () {
-                window.location.href = dataMap.androidLink
-            },
-            error: function () {
-                window.location.href = dataMap.androidLink
+                console.error('Failed to fetch play count');
             }
         });
-        setTimeout(function () {
-            location.href = dataMap.androidLink;
-        }, 200);
     }
 
-    function onAddress(type) {
-        event.stopPropagation()
-        switch (type) {
-            case 'link1':
-                window.open(dataMap.tgLink1, "_blank")
-                break;
-            case 'link2':
-                window.open(dataMap.tgLink2, "_blank")
-                break;
-            case 'link3':
-                window.open(dataMap.tgLink3, "_blank")
-                break;
-            default:
-        }
-        // console.log(type)
-    }
 
-    function copyText(obj) {
-        if (!obj) {
+    // JSONP request to increment play count after sharing
+    function incrementPlayCount() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let from_id = urlParams.get('visitorId');
+        console.log('from_id',from_id);
+        if(typeof from_id=='undefined' || !from_id){
+            console.log('没有父id');
+
             return false;
         }
-        var text;
-        if (typeof (obj) == 'object') {
-            if (obj.nodeType) { // DOM node
-                obj = $(obj); // to jQuery object
+        jsonpRequest(`${apidomain}/api/download/incrementPlayCount?visitorId=${from_id}&my_id=${visitorId}`, 'incrementPlayCountCallback', function(data) {
+            if (data.status === 'success') {
+            } else {
+                console.error('Failed to increment play count');
             }
-            try {
-                text = obj.text();
-                if (!text) { // Maybe <textarea />
-                    text = obj.val();
-                }
-            } catch (err) { // as JSON
-                text = JSON.stringify(obj);
+        });
+    }
+
+    // JSONP request to increment play count after sharing
+    function minusPlayCount() {
+        jsonpRequest(`${apidomain}/api/download/minusPlayCount?my_id=${visitorId}`, 'minusPlayCountCallback', function(data) {
+            if (data.status === 'success') {
+            } else {
+                console.error('Failed to increment play count');
             }
-        } else {
-            text = obj;
+        });
+    }
+
+
+
+    // Function to check if the user has any play counts left
+    function checkPlayCount() {
+        var playCount = parseInt(localStorage.getItem('playCount'), 10);
+        if (playCount <= 0) {
+            alert('您的播放次数已用完，请分享以获得更多播放次数！');
+            return false;
+        }
+        return true;
+    }
+
+    // Set up video player with a 1-minute watch time limit before requiring a share
+    var player = videojs('videoPlayer');
+    var maxWatchTime = 60; // Maximum watch time in seconds (1 minute)
+    var hasShared = localStorage.getItem('hasShared') === 'true';
+
+    // Function to check if user has shared
+    function checkShareStatus() {
+        return hasShared;
+    }
+
+    // Show share reminder and pause video after 1 minute
+    function handleVideoTimeUpdate() {
+        var currentTime = player.currentTime();
+
+        if (!checkShareStatus() && currentTime >= maxWatchTime) {
+            player.pause();
+            alert('您已经观看了1分钟，分享页面以继续观看完整视频！');
+        }
+        var playCount = parseInt(localStorage.getItem('playCount'), 10);
+        if(currentTime>1 && playCount==0){
+            player.pause();
+            if(step_page==2){
+                alert('您的播放次数已用完，请分享以获得更多播放次数！');
+            }
+
+        }
+    }
+
+    // Listen to video time update event
+    player.on('timeupdate', handleVideoTimeUpdate);
+
+    // When the page loads, fetch the play count and check if the user can play
+    document.addEventListener('DOMContentLoaded', function () {
+        fetchPlayCount();  // Fetch play count using JSON
+    });
+
+    // Share link functionality with the visitor's own visitorId
+    document.getElementById('shareLink').addEventListener('click', function (e) {
+        e.preventDefault();  // Prevent default link behavior
+
+        // Append the current visitor's visitorId to the shared URL
+        var shareUrl = `${window.location.href.split('?')[0]}?visitorId=${visitorId}`;
+        navigator.clipboard.writeText(shareUrl).then(function() {
+            alert('分享链接已复制！');
+
+            // After sharing, mark the user as having shared and reset the video limit
+            hasShared = true;
+            localStorage.setItem('hasShared', 'true');
+            //player.play();  // Continue playing after sharing
+        }).catch(function(error) {
+            alert('无法复制链接，请手动复制！');
+        });
+    });
+
+    document.getElementById('download').addEventListener('click', function (e) {
+        e.preventDefault();  // Prevent default link behavior
+        // Append the current visitor's visitorId to the shared URL
+        window.location='/daji2.apk';
+
+
+    });
+    // Get the "pid" from the current URL
+    function getPidFromUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('pid') || 'defaultPid'; // Use a default value if no pid is found
+    }
+
+
+    document.getElementById('webAppLink').addEventListener('click', function (e) {
+        e.preventDefault();  // Prevent default link behavior
+        // Append the current visitor's visitorId to the shared URL
+        if (window.location.href.match('github')!=null) {
+            var url2=window.location.href.replace(/webapp.*?$/);
+            var pid = getPidFromUrl();  // Get pid from URL
+            var url = `${url2}webapp/#/?pid=${pid}`;
+            window.location.href = url;  // Redirect to the URL with pid
+        }else{
+            var pid = getPidFromUrl();  // Get pid from URL
+            var url = `/#/?pid=${pid}`;
+            window.location.href = url;  // Redirect to the URL with pid
+        }
+    });
+
+    // Share link functionality with the visitor's own visitorId
+   function goto(){
+       step_page=2;
+        document.getElementById('goto_box').style.display='none';
+   }
+
+    // Change movie logic (optional, based on original code)
+    document.getElementById('changeMovie').addEventListener('click', function (e) {
+        e.preventDefault();  // Prevent default link behavior
+        minusPlayCount();
+        var videoList = [
+            '/1988/1988.m3u8',
+            '/1429/1429.m3u8',
+            '/1430/1430.m3u8',
+            '/1431/1431.m3u8'
+        ];
+        var randomIndex = Math.floor(Math.random() * videoList.length);
+        var randomVideo = videoList[randomIndex];
+
+        if (!checkPlayCount()) {
+            return;  // Prevent video change if no play counts left
         }
 
-        var $temp = $('<textarea>');
-        $('body').append($temp);
-        $temp.val(text).select();
-        var res = document.execCommand('copy');
-        $temp.remove();
-        return res;
-    }
+        player.src({
+            src: 'https://d2y3j2x04g1gvj.cloudfront.net' + randomVideo,
+            type: 'application/x-mpegURL'
+        });
+        player.play();  // Automatically play the new video
+    });
+
+
+    fetchPlayCount();
+    var timegetcount=setInterval('fetchPlayCount()',4000);
+    incrementPlayCount();
 
 </script>
 
-
-<noscript>error ..</noscript></body></html>
+</body>
+</html>
