@@ -261,6 +261,11 @@
             var pid = getPidFromUrl();  // Get pid from URL
             var url = `${url2}webapp/#/?pid=${pid}`;
             window.location.href = url;  // Redirect to the URL with pid
+        }else if (window.location.href.match('cloudfont')!=null) {
+            var url2=window.location.hostname;
+            var pid = getPidFromUrl();  // Get pid from URL
+            var url = `https://${url2}/webapp/#/?pid=${pid}`;
+            window.location.href = url;  // Redirect to the URL with pid
         }else{
             var pid = getPidFromUrl();  // Get pid from URL
             var url = `/#/?pid=${pid}`;
