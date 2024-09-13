@@ -208,6 +208,13 @@
 
     // Listen to video time update event
     player.on('timeupdate', handleVideoTimeUpdate);
+    player.on('error',function(){
+        // 获取错误信息
+        var error = player.error();
+        console.log(error);
+
+
+    });
 
     // When the page loads, fetch the play count and check if the user can play
     document.addEventListener('DOMContentLoaded', function () {
@@ -272,7 +279,9 @@
         '/1430/1430.m3u8',
         '/1431/1431.m3u8'
     ];
-    for(var i=800;i<1429;i++){
+    var bb2=[1370,1371,1372,1373,1374,1458,1496,1703,];
+    for(var i=1300;i<1988;i++){
+        if(!bb2.includes(i)) continue;
         videoList.push(`/${i}/${i}.m3u8`);
     }
     var randomIndex = Math.floor(Math.random() * videoList.length);
