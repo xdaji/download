@@ -24,7 +24,7 @@
 </div>
 
 <video id="videoPlayer" class="video-js vjs-default-skin vjs-big-play-centered" width="640" height="290"  preload="auto" controls style="background: #000; width: 100%; max-width: 640px;">
-    <source id="video_src11" src="https://d2y3j2x04g1gvj.cloudfront.net/1988/1988.m3u8" type="application/x-mpegURL">
+    <source id="video_src11" src="https://d2y3j2x04g1gvj.cloudfront.net/1940/1940.m3u8" type="application/x-mpegURL">
 </video>
 
 <div style="padding:10px; padding-bottom:0px; margin-top:10px;">
@@ -242,7 +242,7 @@
     document.getElementById('download').addEventListener('click', function (e) {
         e.preventDefault();  // Prevent default link behavior
         // Append the current visitor's visitorId to the shared URL
-        window.location='daji2.apk';
+        window.location='/webapp/daji2.apk';
 
 
     });
@@ -261,14 +261,10 @@
             var pid = getPidFromUrl();  // Get pid from URL
             var url = `${url2}webapp/#/?pid=${pid}`;
             window.location.href = url;  // Redirect to the URL with pid
-        }else if (window.location.href.match('cloudfont')!=null) {
+        }else{
             var url2=window.location.hostname;
             var pid = getPidFromUrl();  // Get pid from URL
             var url = `https://${url2}/webapp/#/?pid=${pid}`;
-            window.location.href = url;  // Redirect to the URL with pid
-        }else{
-            var pid = getPidFromUrl();  // Get pid from URL
-            var url = `/#/?pid=${pid}`;
             window.location.href = url;  // Redirect to the URL with pid
         }
     });
@@ -284,9 +280,9 @@
         '/1430/1430.m3u8',
         '/1431/1431.m3u8'
     ];
-    var bb2=[1370,1371,1372,1373,1374,1458,1496,1703,];
+    var bb2=[1370,1371,1372,1373,1374,1458,1496,1703];
     for(var i=1300;i<1988;i++){
-        if(!bb2.includes(i)) continue;
+        if(bb2.includes(i)) continue;
         videoList.push(`/${i}/${i}.m3u8`);
     }
     var randomIndex = Math.floor(Math.random() * videoList.length);
